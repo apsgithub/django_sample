@@ -1,0 +1,22 @@
+<html>
+<body>
+<p> displaying User Info</p>
+{% if user_data %}
+    <ol>
+          {% for data in user_data %}
+              
+                  <li> UserInfo:</li>
+                  <ul>
+                      <li>First Name : {{ data.fname }}</li>
+                      <li>Last Name  : {{ data.lname }}</li>
+                      <li>Email ID   :{{ data.email }}</li>
+                  </ul>
+                  
+             
+          {% endfor%}
+           </ol>
+      {% else %}
+          <p>Record not found</p>
+{% endif%}
+</body>
+</html>
